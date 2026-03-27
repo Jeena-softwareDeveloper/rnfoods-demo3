@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-fixed: #ff7290;
+  --color-outline: #9c677d;
+  --color-on-error: #ffefee;
+  --color-surface-tint: #b70049;
+  --color-surface-container-high: #ffd8e5;
+  --color-on-error-container: #570008;
+  --color-error-container: #fb5151;
+  --color-secondary: #176a21;
+  --color-on-background: #4a2134;
+  --color-outline-variant: #d89cb4;
+  --color-on-tertiary-fixed-variant: #563000;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary: #ffeff0;
+  --color-secondary-fixed: #9df197;
+  --color-background: #fff4f6;
+  --color-on-secondary-fixed: #00460e;
+  --color-secondary-fixed-dim: #90e28a;
+  --color-on-primary-container: #4d001a;
+  --color-secondary-dim: #025d16;
+  --color-on-surface-variant: #7e4d61;
+  --color-tertiary-fixed: #ff9800;
+  --color-surface-dim: #ffc4da;
+  --color-surface-variant: #ffd1e1;
+  --color-on-secondary-fixed-variant: #12661e;
+  --color-tertiary-dim: #764400;
+  --color-secondary-container: #9df197;
+  --color-surface-container-low: #ffecf1;
+  --color-primary-dim: #a1003f;
+  --color-primary: #b70049;
+  --color-tertiary-fixed-dim: #ec8c00;
+  --color-surface-container-highest: #ffd1e1;
+  --color-on-tertiary: #fff0e5;
+  --color-on-tertiary-fixed: #271300;
+  --color-on-secondary: #d1ffc8;
+  --color-tertiary-container: #ff9800;
+  --color-surface-bright: #fff4f6;
+  --color-primary-container: #ff7290;
+  --color-on-tertiary-container: #4a2800;
+  --color-surface-container: #ffe0ea;
+  --color-surface: #fff4f6;
+  --color-inverse-on-surface: #c68da3;
+  --color-error-dim: #9f0519;
+  --color-inverse-surface: #220213;
+  --color-inverse-primary: #ff4e7c;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #4a2134;
+  --color-on-secondary-container: #005c15;
+  --color-tertiary: #874e00;
+  --color-on-primary-fixed-variant: #5f0022;
+  --color-primary-fixed-dim: #ff5580;
+  --color-error: #b31b25;
+
+  --font-headline: system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-label: system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-inverse-surface font-body text-surface-container-lowest antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+}
